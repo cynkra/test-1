@@ -1,0 +1,9 @@
+name: Test
+on: pull_request
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step_1
+        run: sleep 120 
