@@ -1,4 +1,4 @@
-name: Test
+name: Test_2
 on:
   merge_group:
 

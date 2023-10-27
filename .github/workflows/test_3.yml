@@ -1,0 +1,11 @@
+name: Test_3
+on:
+  pull_request:
+  merge_group:
+
+jobs:
+  job_3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step_1
+        run: sleep 60
