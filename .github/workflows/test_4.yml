@@ -10,4 +10,4 @@ jobs:
       - name: step_1
         run: |
           echo "test 4"
-          sleep 30
+          sleep 40
