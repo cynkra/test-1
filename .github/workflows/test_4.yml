@@ -6,6 +6,7 @@ on:
 jobs:
   job_1:
     runs-on: ubuntu-latest
+    if: false
     steps:
       - name: step_1
         run: |
