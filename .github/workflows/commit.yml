@@ -1,0 +1,25 @@
+name: Commands
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  document:
+    if: startsWith(github.event.comment.body, '/commit')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git identity
+        run: |
+          env | sort
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        shell: bash
+      - name: dummy
+        run: |
+          echo a >> dummy.txt
+          git add dummy.txt
+          git commit -m "dummy"
+          git push
+        shell: bash
