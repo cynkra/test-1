@@ -16,6 +16,8 @@ jobs:
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
         shell: bash
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
       - name: dummy
         run: |
           echo a >> dummy.txt
